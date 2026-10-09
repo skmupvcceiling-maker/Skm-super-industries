@@ -1,0 +1,2706 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SKM Super Industries Limited | Building Hardware & Interior Solutions</title>
+
+    <meta name="description"
+          content="SKM Super Industries Limited - Ceiling boards, sliding systems, locks, net angles and quality building hardware solutions.">
+
+    <meta name="keywords"
+          content="SKM Super Industries, ceiling board, sliding, locks, net angle, building hardware, construction hardware, Bangladesh">
+
+    <meta name="author" content="SKM Super Industries Limited">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        :root {
+            --primary: #f59e0b;
+            --primary-dark: #d97706;
+            --dark: #111827;
+            --dark-2: #1f2937;
+            --gray: #6b7280;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --border: #e5e7eb;
+            --success: #16a34a;
+            --shadow: 0 15px 40px rgba(0,0,0,0.08);
+            --radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: var(--primary-dark);
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: clamp(30px, 4vw, 46px);
+            margin: 10px 0;
+            line-height: 1.15;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 24px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #111;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background: var(--dark);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: #000;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: rgba(255,255,255,0.6);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+
+        /* =========================================================
+           TOP BAR
+        ========================================================= */
+
+        .topbar {
+            background: var(--dark);
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .topbar-inner {
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .topbar-left,
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .topbar a:hover {
+            color: var(--primary);
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--dark);
+            color: var(--primary);
+            display: grid;
+            place-items: center;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .logo-text {
+            line-height: 1.1;
+        }
+
+        .logo-text strong {
+            display: block;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text small {
+            color: var(--gray);
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-action {
+            padding: 10px 17px;
+            background: var(--primary);
+            border-radius: 8px;
+            color: #111 !important;
+        }
+
+        .nav-action::after {
+            display: none;
+        }
+
+        .menu-btn {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(90deg,
+                    rgba(17,24,39,0.98) 0%,
+                    rgba(17,24,39,0.90) 42%,
+                    rgba(17,24,39,0.45) 70%,
+                    rgba(17,24,39,0.30) 100%),
+                url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 80px solid rgba(245,158,11,0.08);
+            border-radius: 50%;
+            right: -180px;
+            bottom: -220px;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero-badge i {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            color: #d1d5db;
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 45px;
+            margin-top: 60px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .stat strong {
+            font-size: 28px;
+            display: block;
+        }
+
+        .stat span {
+            color: #9ca3af;
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           TRUST STRIP
+        ========================================================= */
+
+        .trust-strip {
+            background: var(--primary);
+            color: #111;
+            padding: 17px 0;
+        }
+
+        .trust-items {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .experience-card {
+            position: absolute;
+            bottom: 25px;
+            right: -25px;
+            background: var(--primary);
+            padding: 22px;
+            border-radius: 14px;
+            min-width: 160px;
+            box-shadow: var(--shadow);
+        }
+
+        .experience-card strong {
+            display: block;
+            font-size: 40px;
+            line-height: 1;
+        }
+
+        .experience-card span {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .about-content .eyebrow {
+            color: var(--primary-dark);
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .about-content h2 {
+            font-size: clamp(32px, 4vw, 50px);
+            line-height: 1.1;
+            margin: 12px 0 20px;
+        }
+
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            display: grid;
+            gap: 13px;
+            margin: 25px 0 30px;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+
+        .check-list span {
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            background: #fef3c7;
+            color: #b45309;
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           PRODUCTS
+        ========================================================= */
+
+        .products-section {
+            background: var(--light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: 0.35s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            border-color: #fcd34d;
+        }
+
+        .product-image {
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+            background: #e5e7eb;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.06);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary);
+            color: #111;
+            padding: 6px 10px;
+            font-size: 10px;
+            font-weight: 900;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        .product-info {
+            padding: 22px;
+        }
+
+        .product-info h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .product-link {
+            color: var(--primary-dark);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+
+        /* =========================================================
+           PRODUCT CATEGORIES
+        ========================================================= */
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 18px;
+        }
+
+        .category {
+            min-height: 180px;
+            border-radius: 16px;
+            padding: 25px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .category::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+        }
+
+        .category-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .category h3 {
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+
+        .category span {
+            color: #d1d5db;
+            font-size: 11px;
+        }
+
+
+        /* =========================================================
+           WHY US
+        ========================================================= */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 24px;
+        }
+
+        .why-card {
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: 0.3s;
+        }
+
+        .why-card:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .why-icon {
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            background: #fef3c7;
+            color: #b45309;
+            border-radius: 14px;
+            font-size: 24px;
+            margin-bottom: 22px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           PROJECTS / SHOWCASE
+        ========================================================= */
+
+        .showcase {
+            background: var(--dark);
+            color: white;
+        }
+
+        .showcase .section-title p {
+            color: #9ca3af;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            grid-template-rows: 250px 250px;
+            gap: 15px;
+        }
+
+        .showcase-item {
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .showcase-item:first-child {
+            grid-row: span 2;
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .showcase-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .showcase-overlay {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 25px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+        }
+
+        .showcase-overlay h3 {
+            font-size: 18px;
+        }
+
+        .showcase-overlay span {
+            font-size: 12px;
+            color: #d1d5db;
+        }
+
+
+        /* =========================================================
+           PROCESS
+        ========================================================= */
+
+        .process {
+            background: #f8fafc;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .process-card {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .process-number {
+            width: 62px;
+            height: 62px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: var(--dark);
+            color: var(--primary);
+            display: grid;
+            place-items: center;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .process-card p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            padding: 75px 0;
+        }
+
+        .cta-box {
+            border-radius: 24px;
+            padding: 65px;
+            background:
+                linear-gradient(110deg, rgba(17,24,39,0.98), rgba(17,24,39,0.88)),
+                url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=80")
+                center/cover;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .cta-box p {
+            color: #d1d5db;
+            max-width: 600px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 42px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .contact-icon {
+            min-width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: #fef3c7;
+            display: grid;
+            place-items: center;
+            color: #b45309;
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .contact-item span {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .contact-form {
+            padding: 35px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            border: none;
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #0b1120;
+            color: white;
+            padding-top: 70px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 45px;
+            padding-bottom: 55px;
+        }
+
+        .footer-brand p {
+            color: #9ca3af;
+            font-size: 13px;
+            max-width: 320px;
+            margin: 20px 0;
+        }
+
+        .footer-title {
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: grid;
+            gap: 11px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .socials {
+            display: flex;
+            gap: 9px;
+        }
+
+        .social {
+            width: 38px;
+            height: 38px;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .social:hover {
+            background: var(--primary);
+            color: #111;
+            border-color: var(--primary);
+        }
+
+        .copyright {
+            border-top: 1px solid #1f2937;
+            padding: 20px 0;
+            color: #6b7280;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+
+        /* =========================================================
+           FLOATING BUTTONS
+        ========================================================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 999;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #22c55e;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-weight: 900;
+            box-shadow: 0 10px 25px rgba(34,197,94,0.35);
+            transition: 0.3s;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        .back-top {
+            position: fixed;
+            right: 22px;
+            bottom: 92px;
+            z-index: 999;
+            width: 40px;
+            height: 40px;
+            border-radius: 9px;
+            border: none;
+            background: var(--dark);
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .back-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                gap: 17px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .about-grid {
+                gap: 35px;
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .topbar {
+                display: none;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 76px;
+                left: 0;
+                width: 100%;
+                background: white;
+                border-bottom: 1px solid var(--border);
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 20px 5%;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 13px 0;
+            }
+
+            .nav-action {
+                text-align: center;
+                margin-top: 8px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .trust-items {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 400px;
+            }
+
+            .experience-card {
+                right: 15px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .showcase-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 220px 220px 220px;
+            }
+
+            .showcase-item:first-child {
+                grid-column: span 2;
+                grid-row: auto;
+            }
+
+            .cta-box {
+                padding: 40px 30px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 560px) {
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .hero {
+                min-height: 620px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-stats {
+                gap: 22px;
+            }
+
+            .stat strong {
+                font-size: 23px;
+            }
+
+            .trust-items {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .trust-item {
+                font-size: 10px;
+            }
+
+            .product-grid,
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .showcase-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3,220px);
+            }
+
+            .showcase-item:first-child {
+                grid-column: auto;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 22px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .copyright {
+                flex-direction: column;
+            }
+
+            .cta-box {
+                padding: 35px 22px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+
+        <div class="topbar-left">
+            <span>📞 +880 1XXX-XXXXXX</span>
+            <span>✉️ info@skmsuper.com</span>
+        </div>
+
+        <div class="topbar-right">
+            <span>Quality Building Hardware Solutions</span>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                SKM
+            </div>
+
+            <div class="logo-text">
+                <strong>SKM SUPER</strong>
+                <small>INDUSTRIES LIMITED</small>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
+            <a href="#contact" class="nav-action">
+                Get Quote
+            </a>
+
+        </nav>
+
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i></i>
+                Trusted Building Hardware Solutions
+            </div>
+
+            <h1>
+                Build Better.<br>
+                Build with <span>SKM.</span>
+            </h1>
+
+            <p>
+                Quality ceiling boards, sliding systems, locks,
+                net angles and professional building hardware
+                designed for modern construction and interiors.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="btn btn-primary">
+                    Explore Products →
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Request a Quote
+                </a>
+
+            </div>
+
+
+            <div class="hero-stats">
+
+                <div class="stat">
+                    <strong>100+</strong>
+                    <span>Products</span>
+                </div>
+
+                <div class="stat">
+                    <strong>Quality</strong>
+                    <span>Focused</span>
+                </div>
+
+                <div class="stat">
+                    <strong>Fast</strong>
+                    <span>Supply</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRUST STRIP
+========================================================= -->
+
+<section class="trust-strip">
+
+    <div class="container trust-items">
+
+        <div class="trust-item">
+            ✓ Quality Materials
+        </div>
+
+        <div class="trust-item">
+            ✓ Reliable Supply
+        </div>
+
+        <div class="trust-item">
+            ✓ Competitive Pricing
+        </div>
+
+        <div class="trust-item">
+            ✓ Customer Support
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="section" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85"
+                alt="Construction and building work">
+
+            <div class="experience-card">
+                <strong>SKM</strong>
+                <span>SUPER INDUSTRIES</span>
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="eyebrow">
+                About SKM Super
+            </span>
+
+            <h2>
+                Hardware that helps
+                your projects move forward.
+            </h2>
+
+            <p>
+                SKM Super Industries Limited is focused on supplying
+                dependable building hardware and interior construction
+                products for contractors, dealers, builders,
+                interior professionals and homeowners.
+            </p>
+
+            <p>
+                From ceiling solutions and sliding systems to locks,
+                net angles and other essential hardware, our goal is
+                simple: provide products that combine practical
+                performance, quality and value.
+            </p>
+
+
+            <ul class="check-list">
+
+                <li>
+                    <span>✓</span>
+                    Reliable product quality
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Wide range of hardware
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Dealer & project supply
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Customer-focused service
+                </li>
+
+            </ul>
+
+
+            <a href="#contact" class="btn btn-dark">
+                Talk to SKM Super →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
+
+<section class="section products-section" id="products">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Products</span>
+
+            <h2>
+                Building Hardware for Every Project
+            </h2>
+
+            <p>
+                Explore our core product categories for construction,
+                interior finishing, doors, windows and architectural
+                hardware applications.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=85"
+                        alt="Ceiling board">
+
+                    <span class="product-tag">
+                        Popular
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Ceiling Boards</h3>
+
+                    <p>
+                        Ceiling board solutions for modern interior
+                        finishing and commercial applications.
+                    </p>
+
+                    <a href="#contact" class="product-link">
+                        Ask About Ceiling Boards →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85"
+                        alt="Sliding hardware">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Sliding Systems</h3>
+
+                    <p>
+                        Sliding hardware and components for doors,
+                        partitions and interior applications.
+                    </p>
+
+                    <a href="#contact" class="product-link">
+                        Explore Sliding Products →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1000&q=85"
+                        alt="Door lock">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Locks & Hardware</h3>
+
+                    <p>
+                        Practical locking solutions and door hardware
+                        for residential and commercial use.
+                    </p>
+
+                    <a href="#contact" class="product-link">
+                        View Lock Range →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 4 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=85"
+                        alt="Metal hardware">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Net Angle</h3>
+
+                    <p>
+                        Durable angle and finishing components for
+                        construction and interior applications.
+                    </p>
+
+                    <a href="#contact" class="product-link">
+                        Ask About Net Angle →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 5 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=85"
+                        alt="Construction hardware">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Construction Hardware</h3>
+
+                    <p>
+                        Essential hardware products for construction,
+                        renovation and finishing work.
+                    </p>
+
+                    <a href="#contact" class="product-link">
+                        Explore Hardware →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 6 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1531835551805-16d864c8d6d1?auto=format&fit=crop&w=1000&q=85"
+                        alt="Interior hardware">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>More Solutions</h3>
+
+                    <p>
+                        A growing range of hardware and accessories
+                        for different project requirements.
+                    </p>
+
+                    <a href="#contact" class="product-link">
+                        Contact Our Team →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CATEGORIES
+========================================================= -->
+
+<section class="section" id="solutions">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Product Categories</span>
+
+            <h2>
+                Solutions for Modern Construction
+            </h2>
+
+            <p>
+                Designed around the everyday needs of builders,
+                dealers, contractors and interior professionals.
+            </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <div class="category"
+                 style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85')">
+
+                <div class="category-content">
+                    <h3>Ceiling Solutions</h3>
+                    <span>Interior finishing</span>
+                </div>
+
+            </div>
+
+
+            <div class="category"
+                 style="background-image:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85')">
+
+                <div class="category-content">
+                    <h3>Sliding Hardware</h3>
+                    <span>Doors & partitions</span>
+                </div>
+
+            </div>
+
+
+            <div class="category"
+                 style="background-image:url('https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=900&q=85')">
+
+                <div class="category-content">
+                    <h3>Locks</h3>
+                    <span>Security hardware</span>
+                </div>
+
+            </div>
+
+
+            <div class="category"
+                 style="background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85')">
+
+                <div class="category-content">
+                    <h3>Building Hardware</h3>
+                    <span>Construction essentials</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY SKM
+========================================================= -->
+
+<section class="section products-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Why Choose SKM</span>
+
+            <h2>
+                Built Around Your Business
+            </h2>
+
+            <p>
+                We understand that hardware suppliers need more
+                than products. They need consistency, service and
+                dependable supply.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ✓
+                </div>
+
+                <h3>Quality Focus</h3>
+
+                <p>
+                    We focus on supplying products that meet practical
+                    construction and interior application requirements.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ⚡
+                </div>
+
+                <h3>Reliable Supply</h3>
+
+                <p>
+                    We aim to keep essential products available so
+                    dealers and project teams can keep moving.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ◆
+                </div>
+
+                <h3>Wide Range</h3>
+
+                <p>
+                    Multiple categories under one business make it
+                    easier to source different building hardware needs.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ৳
+                </div>
+
+                <h3>Competitive Value</h3>
+
+                <p>
+                    We work to provide practical products at pricing
+                    suitable for dealers and project requirements.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    👥
+                </div>
+
+                <h3>Dealer Friendly</h3>
+
+                <p>
+                    Our product approach is designed to support
+                    hardware shops, distributors and construction suppliers.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ★
+                </div>
+
+                <h3>Customer Support</h3>
+
+                <p>
+                    Need help choosing a product? Our team can help
+                    identify the right solution for your requirement.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECT SHOWCASE
+========================================================= -->
+
+<section class="section showcase" id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Applications</span>
+
+            <h2>
+                Made for Real Projects
+            </h2>
+
+            <p>
+                SKM Super products can support residential,
+                commercial, interior and construction applications.
+            </p>
+
+        </div>
+
+
+        <div class="showcase-grid">
+
+
+            <div class="showcase-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1300&q=85"
+                    alt="Residential project">
+
+                <div class="showcase-overlay">
+
+                    <h3>Residential Construction</h3>
+                    <span>Hardware & finishing solutions</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="showcase-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85"
+                    alt="Office interior">
+
+                <div class="showcase-overlay">
+
+                    <h3>Office Interiors</h3>
+                    <span>Interior hardware</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="showcase-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85"
+                    alt="Commercial building">
+
+                <div class="showcase-overlay">
+
+                    <h3>Commercial Buildings</h3>
+                    <span>Construction hardware</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="showcase-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                    alt="Modern interior">
+
+                <div class="showcase-overlay">
+
+                    <h3>Modern Interiors</h3>
+                    <span>Ceiling & finishing</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="showcase-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85"
+                    alt="Construction project">
+
+                <div class="showcase-overlay">
+
+                    <h3>Construction Projects</h3>
+                    <span>Professional hardware supply</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section class="section process">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>How We Work</span>
+
+            <h2>
+                Simple. Professional. Reliable.
+            </h2>
+
+            <p>
+                From product selection to supply, we keep the
+                process straightforward.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>Tell Us</h3>
+
+                <p>
+                    Share your product or project requirement.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>Choose</h3>
+
+                <p>
+                    We help identify suitable products and quantities.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>Confirm</h3>
+
+                <p>
+                    Confirm pricing, quantity and delivery requirements.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>Receive</h3>
+
+                <p>
+                    Your hardware is prepared for supply and delivery.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    Need building hardware?
+                </h2>
+
+                <p>
+                    Tell us what you need. Our team can help you
+                    find the right SKM Super product for your project.
+                </p>
+
+            </div>
+
+
+            <div class="cta-buttons">
+
+                <a href="#contact" class="btn btn-primary">
+                    Request a Quote
+                </a>
+
+                <a href="tel:+8801XXXXXXXXX" class="btn btn-outline">
+                    Call Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="section" id="contact">
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-info">
+
+            <span class="eyebrow">
+                Contact SKM Super
+            </span>
+
+            <h2>
+                Let's discuss your requirement.
+            </h2>
+
+            <p>
+                Whether you need ceiling boards, sliding hardware,
+                locks, net angles or other construction products,
+                send us your requirement.
+            </p>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <div>
+                    <strong>Phone</strong>
+                    <span>+880 1XXX-XXXXXX</span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+                <div>
+                    <strong>Email</strong>
+                    <span>info@skmsuper.com</span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <div>
+                    <strong>Office</strong>
+                    <span>Bangladesh</span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    🕐
+                </div>
+
+                <div>
+                    <strong>Business Hours</strong>
+                    <span>Saturday – Thursday | 9:00 AM – 6:00 PM</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <form class="contact-form" id="quoteForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        placeholder="01XXXXXXXXX"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="you@example.com">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Product
+                    </label>
+
+                    <select>
+
+                        <option>Select Product</option>
+                        <option>Ceiling Board</option>
+                        <option>Sliding System</option>
+                        <option>Locks</option>
+                        <option>Net Angle</option>
+                        <option>Construction Hardware</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Quantity / Requirement
+                </label>
+
+                <textarea
+                    placeholder="Tell us what you need..."></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary form-submit">
+
+                Send Request →
+
+            </button>
+
+        </form>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <div class="logo-icon">
+                        SKM
+                    </div>
+
+                    <div class="logo-text">
+
+                        <strong style="color:white;">
+                            SKM SUPER
+                        </strong>
+
+                        <small style="color:#9ca3af;">
+                            INDUSTRIES LIMITED
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    Building hardware and interior construction
+                    solutions for modern projects.
+                </p>
+
+
+                <div class="socials">
+
+                    <a href="#" class="social">
+                        f
+                    </a>
+
+                    <a href="#" class="social">
+                        in
+                    </a>
+
+                    <a href="#" class="social">
+                        ▶
+                    </a>
+
+                    <a href="#" class="social">
+                        ◎
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="footer-title">
+                    Products
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#products">
+                            Ceiling Boards
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#products">
+                            Sliding Systems
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#products">
+                            Locks
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#products">
+                            Net Angle
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#products">
+                            Building Hardware
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="footer-title">
+                    Company
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#about">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#solutions">
+                            Solutions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">
+                            Applications
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="footer-title">
+                    Contact
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="tel:+8801XXXXXXXXX">
+                            +880 1XXX-XXXXXX
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@skmsuper.com">
+                            info@skmsuper.com
+                        </a>
+                    </li>
+
+                    <li>
+                        Bangladesh
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            <span>
+                © <span id="year"></span>
+                SKM Super Industries Limited.
+                All Rights Reserved.
+            </span>
+
+            <span>
+                Building Better Together.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     FLOATING BUTTONS
+========================================================= -->
+
+<a
+    href="https://wa.me/8801XXXXXXXXX"
+    class="floating-whatsapp"
+    target="_blank"
+    title="Chat on WhatsApp">
+
+    WA
+
+</a>
+
+
+<button
+    class="back-top"
+    id="backTop">
+
+    ↑
+
+</button>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /* ---------------------------------------------------------
+       MOBILE MENU
+    --------------------------------------------------------- */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+
+    /* Close mobile menu after clicking link */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+
+    });
+
+
+    /* ---------------------------------------------------------
+       BACK TO TOP
+    --------------------------------------------------------- */
+
+    const backTop = document.getElementById("backTop");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+            backTop.classList.add("show");
+        } else {
+            backTop.classList.remove("show");
+        }
+
+    });
+
+
+    backTop.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    /* ---------------------------------------------------------
+       FOOTER YEAR
+    --------------------------------------------------------- */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* ---------------------------------------------------------
+       CONTACT FORM
+    --------------------------------------------------------- */
+
+    const quoteForm = document.getElementById("quoteForm");
+
+    quoteForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Thank you for contacting SKM Super Industries Limited. " +
+            "Your request has been received."
+        );
+
+        quoteForm.reset();
+
+    });
+
+
+    /* ---------------------------------------------------------
+       SIMPLE REVEAL ANIMATION
+    --------------------------------------------------------- */
+
+    const revealElements = document.querySelectorAll(
+        ".product-card, .why-card, .process-card, .category, .showcase-item"
+    );
+
+
+    const revealObserver = new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+
+                    revealObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+    revealElements.forEach(element => {
+
+        element.style.opacity = "0";
+        element.style.transform = "translateY(20px)";
+        element.style.transition =
+            "opacity .6s ease, transform .6s ease";
+
+        revealObserver.observe(element);
+
+    });
+
+</script>
+
+
+</body>
+</html>
+```
